@@ -1,4 +1,4 @@
-str="abataca"
+str="abataba"
 
 def task_6(s):
     print(s)
@@ -7,10 +7,10 @@ def task_6(s):
 
     result = True
     for i in range(l//2):
-        l-=1
-        print(s[i], s[l])
 
-        if s[i] != s[l]:
+        print(s[i], s[~i])
+
+        if s[i] != s[~i]:
             result = False
             break
     return result
