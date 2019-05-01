@@ -1,12 +1,12 @@
-str="abataba"
+str="abztaba"
 
 def task_6(s):
     print(s)
 
-    l = len(s)
+    l = len(s)//2
 
     result = True
-    for i in range(l//2):
+    for i in range(l):
 
         print(s[i], s[~i])
 
