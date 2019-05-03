@@ -24,7 +24,7 @@ def task_4(d1, d2):
 #    print("Лет:", dl)
 #    print("Месяцев:", mes)
 #    print("Недель:", ned)
-#   print("Дней:", d.days)
+#    print("Дней:", d.days)
 #    print("Часов:", dch)
 #    print("Минут:", dmi)
 #    print("Секунд:", sec)
