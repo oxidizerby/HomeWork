@@ -20,14 +20,14 @@ def task_4(d1, d2):
     mes = (dl * 12) + dme
     sec = dmi * 60 + d2.second - d1.second
 
-    print("Веков", vek)
-    print("Лет:", dl)
-    print("Месяцев:", mes)
-    print("Недель:", ned)
-    print("Дней:", d.days)
-    print("Часов:", dch)
-    print("Минут:", dmi)
-    print("Секунд:", sec)
+#    print("Веков", vek)
+#    print("Лет:", dl)
+#    print("Месяцев:", mes)
+#    print("Недель:", ned)
+#   print("Дней:", d.days)
+#    print("Часов:", dch)
+#    print("Минут:", dmi)
+#    print("Секунд:", sec)
 
     return vek, dl, mes, ned, d.days, dch, dmi, sec
 
