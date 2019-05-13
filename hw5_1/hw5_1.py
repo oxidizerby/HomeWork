@@ -13,11 +13,9 @@ def task_1(a, *args, **nargs):
     mres1 = []
     mres2 = {}
     for i in args:
-        mres1 += (a == i, type(a) == type(i))
+        mres1.append((a == i, type(a) == type(i)))
     for n in nargs:
         mres2[n] = (nargs[n] == a, type(nargs[n]) == type(a))
-
-    print(nargs)
 
     return mres1, mres2
 
