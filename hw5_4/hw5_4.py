@@ -41,14 +41,17 @@ def decor(f):
 @decor
 def funk(*arg, **narg):
     print('---------------')
-    print(arg)
-    print(narg)
+    print(arg, '\n', narg)
 
 
 dc = Decimal('55')
 di = {'key1': 'znach1', 'key2': 'znach2'}
-dct = {'m': 5, 'n': 3, 'o': 'asd', 'p': 0, 'l': di, 'q': 0, 'r': 0, 'k': 0}
-funk('sd', [1, 2, 3], True, dc, di, 58.76, 59, **dct)
+
+lst = ['sd', [1, 2, 3], True, dc, di, 58.76, 59]
+dct = {'m': 5, 'n': dc, 'o': 'asd', 'p': 0, 'l': di, 'q': 0, 'r': 0, 'k': [1, 2, 3, 4]}
+print(lst, "\n", dct)
+
+funk(*lst, **dct)
 
 
 
