@@ -26,7 +26,7 @@ print(ls)
 
 # findtext = r"\b[A-Z][a-z]{2,9}\b"
 findtext = r"(?:(?<=^)|(?<=\s))([A-Z][a-z]{2,9})(?:(?=\s)|(?=\,)|(?=\:)|(?=\;)|(?=\.)|(?=$))"
-res = re.findall(findtext, ls)
+res = re.findall(findtext, ls, re.MULTILINE)
 print(res)
 print(len(res))
 
