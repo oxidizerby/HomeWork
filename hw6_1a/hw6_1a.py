@@ -20,9 +20,9 @@
 import re
 
 fin = open('task1_input.txt')
-fou = open('task1_output.txt', mode='w')
-ls = (fin.read())
-print(ls)
+ls = fin.read()
+fin.close()
+# print(ls)
 
 # findtext = r"\b[A-Z][a-z]{2,9}\b"
 findtext = r"(?:(?<=^)|(?<=\s))([A-Z][a-z]{2,9})(?:(?=\s)|(?=\,)|(?=\:)|(?=\;)|(?=\.)|(?=$))"
@@ -31,11 +31,12 @@ res = re.findall(findtext, ls, re.MULTILINE)
 print(res)
 print(len(res))
 
+fou = open('task1_output.txt', mode='w')
 resstr = 'Слова: '
 for s in res:
     resstr = resstr + s + ', '
 fou.write(str(resstr[:-2] + '.'))
-
+fou.close()
 
 
 
