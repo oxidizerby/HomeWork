@@ -18,10 +18,14 @@
 
 # import sys
 import re
+import os.path
 
-fin = open('task1_input.txt')
-ls = fin.read()
-fin.close()
+fp = 'task1_input.txt'
+ls = ''
+if os.path.exists(fp):
+    fin = open(fp)
+    ls = fin.read()
+    fin.close()
 # print(ls)
 
 # findtext = r"\b[A-Z][a-z]{2,9}\b"
