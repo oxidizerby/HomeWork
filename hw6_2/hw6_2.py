@@ -27,14 +27,14 @@ def printdict(prndtc, tabs):
     tabs += 1
     for prn in prndtc:
         if str(type(prndtc[prn])) == "<class 'dict'>":
-            print('\t' * tabs, prn)
+            print('\t' * tabs + prn)
             printdict(prndtc[prn], tabs)
         else:
-            print('\t' * tabs, prn, prndtc[prn])
+            print('\t' * tabs + prn, prndtc[prn])
     pass
 
 
-pch = finf('./venv/lib/python3.7/site-packages/pip-19.0.3-py3.7.egg/pip/_internal')
-print(pch)
-printdict(pch, -1)
+pth = finf('./venv/')
+print(pth)
+printdict(pth, -1)
 
