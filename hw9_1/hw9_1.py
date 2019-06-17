@@ -122,22 +122,22 @@ def task_5(path):
     conn = sqlite3.connect(path)
     curs = conn.cursor()
 
-    res = tuple(curs.execute("DELETE FROM Items WHERE department "
-                             "IN (SELECT Departments.id FROM Departments JOIN Shops ON Shops.id = Departments.Shop "
-                             "WHERE Shops.address is NULL)"))
+    curs.execute("DELETE FROM Items WHERE department "
+                 "IN (SELECT Departments.id FROM Departments JOIN Shops ON Shops.id = Departments.Shop "
+                 "WHERE Shops.address is NULL)")
 
     curs.close()
     conn.commit()
     conn.close()
-    return res
+    pass
 
 
 p = 'base.db'
 # task_1(p)
 # task_2(p)
-print('--- task_3 --------start---', '\n', task_3(p), '\n' + '--- task_3 ----------end---')
+# print('--- task_3 --------start---', '\n', task_3(p), '\n' + '--- task_3 ----------end---')
 # task_4(p)
-# task_5(p)
+task_5(p)
 
 
 
